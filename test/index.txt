@@ -1,0 +1,25 @@
+create database bar;
+create database foo;
+use foo;
+
+create table Users (id int NOT NULL auto_increment primary key, first_name varchar(50) NOT NULL, last_name varchar(50), age int, zipcode int);
+create table Authors (xd int NOT NULL auto_increment primary key, first_name varchar(50) NOT NULL, last_name varchar(50));
+show tables;
+INSERT INTO Users (first_name, last_name, age, zipcode) VALUES ("Terry",     "Pratchett", 70,  92124), ("Ian",       "Tregellis", 48,  92123), ("Jody",      "Taylor",    50,  92120), ("Stephen",   "King",      74,  92125), ("Ted",       "Chiang",    56,  92120);
+dump database foo;
+INSERT INTO Authors (first_name, last_name) VALUES (Stephen, King), (JK, Rowling), (Truong, Nguyen);
+
+dump database foo;
+show indexes;
+
+use bar;
+use foo;
+
+dump database foo;
+show indexes;
+
+SHOW index id FROM Users; 
+
+drop database foo;
+drop database bar;
+quit;

@@ -1,3 +1,15 @@
+# Ignore all
+*
+# Unignore all with extensions
+!*.*
+
+# test dir
+!/test
+
+# vscode and build dir
+.vscode
+/build
+
 # Prerequisites
 *.d
 

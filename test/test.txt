@@ -1,0 +1,13 @@
+create database Join;
+use Join;
+create table Authors (id int NOT NULL auto_increment primary key, first_name varchar(50) NOT NULL, last_name varchar(50));
+INSERT INTO Authors (first_name, last_name) VALUES (Stephen, King), (JK, Rowling), (Truong, Nguyen);
+create table Books (id int NOT NULL auto_increment primary key, title varchar(90) NOT NULL, author_id int);
+INSERT INTO Books (title, author_id) VALUES ("Harry Potter and the Sorcerer Stone", 2), ("Harry Potter and the Philosopher Stone", 2), ("Harry Potter and the Prisoner of Azkaban", 2), ("Harry Potter and the Chamber of Secrets", 2), ("Harry Potter and the Goblet of Fire", 2), ("Harry Potter and the Order of the Phoenix", 2), ("Harry Potter and the Half Blood Prince", 2), ("Carrie", 1), ("The Dark Tower", 1), ("The Green Mile", 1), ("Wavelets and Filter Banks", 0);
+dump database Join;
+show indexes;
+select * from Authors;
+select * from Books;
+select last_name, title from Authors left join Books on Authors.id=Books.author_id;
+drop database Join;
+quit;
