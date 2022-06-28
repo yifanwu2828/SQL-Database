@@ -5,7 +5,7 @@
 
 # test dir
 !/test
-
+!/.github
 # vscode and build dir
 .vscode
 /build
